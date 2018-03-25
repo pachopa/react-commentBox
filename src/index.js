@@ -5,7 +5,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
   <CommentBox
-  url='/api/comments'
+  url='http://localhost:8000/api/comments'
   pollInterval={2000} />,
   document.getElementById('root')
  );

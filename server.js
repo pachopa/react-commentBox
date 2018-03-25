@@ -8,14 +8,14 @@ var dotenv = require('dotenv');
 
 dotenv.config();
 
-var url = process.env.MONGODB_URI;
+var url = process.env.MONGODB_URI || "mongodb://heroku_m8qf6xsv:dc0iva6cvmipgmhe5kl8u8m9o6@ds223509.mlab.com:23509/heroku_m8qf6xsv";
 //and create our instances
 var app = express();
 var router = express.Router();
 
 //set our port to either a predetermined port number if you have set 
 //it up, or 3001
-var port = process.env.API_PORT || 5000;
+var port = process.env.API_PORT || 8000;
 
 mongoose.connect(url);
 
