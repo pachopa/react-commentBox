@@ -13,9 +13,6 @@ var router = express.Router();
 //it up, or 3001
 var port = process.env.API_PORT || 3001;
 
-//db config
-mongodb://<dbuser>:<dbpassword>@ds123399.mlab.com:23399/web-comment-app
-
 mongoose.connect('mongodb://comment-web-app:hi12345678@ds123399.mlab.com:23399/comment-web-app');
 
 //now we should configure the API to use bodyParser and look for 
