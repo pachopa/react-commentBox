@@ -1,4 +1,4 @@
-# Comment Project
+# Comments Project
 
 A comment project is a simple, single-page facebook comment clone.
 This project provide users' writing, updating and deleting comments 
