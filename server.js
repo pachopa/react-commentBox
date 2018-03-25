@@ -4,7 +4,11 @@ var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var Comment = require('./model/comments');
+var dotenv = require('dotenv');
 
+dotenv.config();
+
+var url = process.env.MONGOLAB_URI;
 //and create our instances
 var app = express();
 var router = express.Router();
@@ -13,7 +17,7 @@ var router = express.Router();
 //it up, or 3001
 var port = process.env.API_PORT || 3001;
 
-mongoose.connect('mongodb://comment-web-app:hi12345678@ds123399.mlab.com:23399/comment-web-app');
+mongoose.connect(url);
 
 //now we should configure the API to use bodyParser and look for 
 //JSON data in the request body
