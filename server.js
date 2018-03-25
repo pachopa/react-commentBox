@@ -15,7 +15,7 @@ var router = express.Router();
 
 //set our port to either a predetermined port number if you have set 
 //it up, or 3001
-var port = process.env.API_PORT || 3001;
+var port = process.env.API_PORT || 5000;
 
 mongoose.connect(url);
 
