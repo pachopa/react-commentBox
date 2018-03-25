@@ -16,11 +16,15 @@
     "react-scripts": "1.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
     "start-dev": "nf start -p 3000",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "engines": {
+    "node": "9.4.0"
   },
   "proxy": "http://localhost:5000"
 }

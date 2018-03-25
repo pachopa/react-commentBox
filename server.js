@@ -8,7 +8,7 @@ var dotenv = require('dotenv');
 
 dotenv.config();
 
-var url = process.env.MONGOLAB_URI;
+var url = process.env.MONGODB_URI;
 //and create our instances
 var app = express();
 var router = express.Router();
