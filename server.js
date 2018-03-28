@@ -15,7 +15,7 @@ var router = express.Router();
 
 //set our port to either a predetermined port number if you have set 
 //it up, or 3001
-var port = process.env.API_PORT || 8000;
+
 
 mongoose.connect(url);
 
@@ -98,6 +98,7 @@ router.route('/comments/:comment_id')
 app.use('/api', router);
 
 //starts the server and listens for requests
-app.listen(port, function () {
-  console.log(`api running on port ${port}`);
+var server = app.listen(process.env.PORT || 8080, function () {
+  var port = server.address().port;
+  console.log("App now running on port", port);
 });
